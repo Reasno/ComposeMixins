@@ -1,0 +1,16 @@
+{
+    "name": "reasno/compose-mixins",
+    "description": "Customizable function composition for PHP.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Reasno",
+            "email": "guxi99@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6"
+    }
+}
