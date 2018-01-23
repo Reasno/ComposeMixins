@@ -14,7 +14,7 @@
         "php": ">=5.6"
     },
     "autoload" : {
-        "psr-4" : {"\\Reasno\\Helpers\\" : "src/"},
+        "psr-4" : {"Reasno\\Helpers\\" : "src/"},
         "files" : ["src/ComposeMixins.php"]
     }
 }
