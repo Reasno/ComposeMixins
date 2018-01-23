@@ -14,14 +14,14 @@ class Recipe{
 		if ($handlerName === null){
 			return;
 		}
-		$handler = new $this->handerClass;
+		$handler = new $this->handlerClass;
 		try {
 			$method = new \ReflectionMethod( $handler, $handlerName );
 		} catch(\ReflectionException $e){
 			throw new \Error('Invalid RecipeHandler Name: '.$e->getMessage());
 		}
 		$method->setAccessible(true);
-		$this->handler = \Closure::bind($method->getClosure($handler), $this);
+		$this->handler = $method->getClosure($handler);
 	}
 
 	public static function fromCallable(callable $fn){
