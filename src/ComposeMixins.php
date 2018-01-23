@@ -90,14 +90,16 @@ class Recipe{
 		if ($options !== null){
 			$this->assignVars = (bool)$options['assignVars'];
 			$this->reverseOrder = (bool)$options['reverseOrder'];
+			$this->handlerClass = $options['handler'];
 		} else {
 			$this->assignVars = false;
 			$this->reverseOrder = false;
+			$this->handlerClass =  __NAMESPACE__."\\RecipeHandler";
 		}
 		if ($handlerName === null){
 			return;
 		}
-		$handler = new RecipeHandler;
+		$handler = new $this->handerClass;
 		try {
 			$method = new \ReflectionMethod( $handler, $handlerName );
 		} catch(\ReflectionException $e){
