@@ -3,12 +3,8 @@ namespace Reasno\Helpers;
 class Recipe{
 	public function __construct( $handlerName = null, $options = null){
 		if ($options !== null){
-			$this->assignVars = (bool)$options['assignVars'];
-			$this->reverseOrder = (bool)$options['reverseOrder'];
 			$this->handlerClass = $options['handler'];
 		} else {
-			$this->assignVars = false;
-			$this->reverseOrder = false;
 			$this->handlerClass =  __NAMESPACE__."\\RecipeHandler";
 		}
 		if ($handlerName === null){
