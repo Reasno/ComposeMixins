@@ -2,8 +2,8 @@
 ComposeMixins is a tiny but extendable PHP library for function composition. 
 
 ## installation
-```
-// in your project root
+```bash
+# in your project root
 composer install reasno/compose-mixins
 ```
 
@@ -38,13 +38,13 @@ This library comes with a few buildin recipes. These recipes define how function
 * all: returns true if all functions return true.
 * any: returns true if any function returns true.
 
-To use any recipe, create new instance with their name.
+To use any recipe, create new instance with their names.
 ```php
 new Recipe('pipe');
 ```
 
 You can create new recipes on the fly. Just pass in a closure.
-```
+```php
 Recipe::fromCallable(function(...$fns){
 	$i = 0;
 	return function($input) use (&$i, $fns){
@@ -65,7 +65,7 @@ Class MyRecipeHandler{
 }
 $CustomRecipe = new Recipe('fancy', ['handler' => MyRecipeHandler']);
 ```
-Please take a look at RecipeHandler.php in this library to learn how to write your own handlers.
+Please take a look at [RecipeHandler.php](https://github.com/Reasno/ComposeMixins/blob/master/src/RecipeHandler.php) in this library to learn how to write your own handlers.
 
 ## Caveat
 Functions composed with map and collapse recipes also accept Traversable as input.
