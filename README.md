@@ -1,5 +1,5 @@
 # ComposeMixins
-ComposeMixins is a tiny but extendable library for function composition. 
+ComposeMixins is a tiny but extendable PHP library for function composition. 
 
 # Hello World
 ```php
