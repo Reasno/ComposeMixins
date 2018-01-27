@@ -12,7 +12,7 @@ composer install reasno/compose-mixins
 use function Reasno\Helpers\composeMixins;
 use Reasno\Helpers\Recipe;
 
-$c = Reasno\Helpers\composeMixins(new Recipe('pipe'), callable $a, callable $b);
+$c = composeMixins(new Recipe('pipe'), /* callable */ $a, /* callable */ $b);
 $result = $c($input); //Use the composed function
 
 ```
@@ -50,7 +50,7 @@ Recipe::fromCallable(function(...$fns){
 	return function($input) use (&$i, $fns){
 		try{
 			return $fns[$i++]($input);
-		} catch( \OutOfBoundsException $e ){
+		} catch( OutOfBoundsException $e ){
 			return null;
 		}
 
