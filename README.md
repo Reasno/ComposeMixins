@@ -51,7 +51,7 @@ Recipe::fromCallable(function(...$fns){
 		try{
 			return $fns[$i++]($input);
 		} catch( \OutOfBoundsException $e ){
-			return null
+			return null;
 		}
 
 	};
