@@ -1,7 +1,7 @@
 # ComposeMixins
 ComposeMixins is a tiny but extendable PHP library for function composition. 
 
-## installation
+## Installation
 ```bash
 # in your project root
 composer install reasno/compose-mixins
