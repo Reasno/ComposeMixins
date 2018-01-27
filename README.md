@@ -27,7 +27,9 @@ var_dump($result1 === $result2); //true
 ```
 
 ## API
-```function composeMixins(Recipe $recipe, callable ...$mixins) ```
+```php
+function composeMixins(Recipe $recipe, callable ...$mixins) 
+```
 
 ## Recipes
 This library comes with a few built in recipes. These recipes define how functions are composed together.
