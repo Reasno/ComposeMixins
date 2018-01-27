@@ -1,5 +1,5 @@
 # ComposeMixins
-ComposeMixins is a tiny but extendable library for function composition. 
+ComposeMixins is a tiny but extendable PHP library for function composition. 
 
 ## installation
 ```
@@ -69,3 +69,4 @@ Please take a look at RecipeHandler.php in this library to learn how to write yo
 
 ## Caveat
 Functions composed with map and collapse recipes also accept Traversable as input.
+
