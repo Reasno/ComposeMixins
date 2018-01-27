@@ -9,6 +9,7 @@ class RecipeHandler{
 			}, $init);
 		};
 	}
+
 	private function map(callable ...$fns){
 		return function($init) use ($fns){
 			if ($init instanceof Traversable){
@@ -18,21 +19,10 @@ class RecipeHandler{
 			}
 			return array_reduce($fns, function($acc, $fn){
 				return array_map($fn , $acc);
-			}, (array)$init);
+			}, $first);
 		};
 	}
-	private function collapse(callable ...$fns){
-		return function($init) use ($fns){
-			if ($init instanceof Traversable){
-				$first = iterator_to_array($init);
-			} else {
-				$first = (array)$init;
-			}
-			return array_reduce($fns, function($acc, $fn){
-				return array_reduce($fn , $acc);
-			}, (array)$init);
-		};
-	}
+
 	private function any(callable ...$fns){
 		return function($init) use ($fns){
 			return array_reduce($fns, function($acc, $fn){
@@ -40,6 +30,7 @@ class RecipeHandler{
 			}, $init);
 		};
 	}
+
 	private function all(callable ...$fns){
 		return function($init) use ($fns){
 			return array_reduce($fns, function($acc, $fn){

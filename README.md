@@ -32,11 +32,10 @@ function composeMixins(Recipe $recipe, callable ...$mixins)
 ```
 
 ## Recipes
-This library comes with a few built in recipes. These recipes define how functions are composed together.
+This library comes with a few (most frequently used) built in recipes. These recipes define how functions are composed together.
 
 * pipe: h(x) = g(f(x))
 * map: h(list) =  array_map(g, (array_map(f, list))) 
-* collapse: h(cube) =  array_reduce((array_reduce(cube, f), g)) 
 * all: returns true if all functions (eg. f(x), g(x)...) return true.
 * any: returns true if any function returns true.
 
@@ -47,12 +46,13 @@ new Recipe('pipe');
 
 You can create new recipes on the fly. Just pass in a closure.
 ```php
-Recipe::fromCallable(function(...$fns){
-	$i = 0;
+/* use a different handler each time the composed function is called */
+$r = Recipe::fromCallable(function(...$fns){
+	static $i = 0;
 	return function($input) use (&$i, $fns){
 		try{
 			return $fns[$i++]($input);
-		} catch( OutOfBoundsException $e ){
+		} catch( Error $e ){
 			return null;
 		}
 
