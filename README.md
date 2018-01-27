@@ -37,7 +37,7 @@ This library comes with a few built in recipes. These recipes define how functio
 * pipe: h(x) = g(f(x))
 * map: h(list) =  array_map(g, (array_map(f, list))) 
 * collapse: h(cube) =  array_reduce((array_reduce(cube, f), g)) 
-* all: returns true if all functions return true.
+* all: returns true if all functions (eg. f(x), g(x)...) return true.
 * any: returns true if any function returns true.
 
 To use any recipe, create new instance with their names.
@@ -70,5 +70,6 @@ $CustomRecipe = new Recipe('fancy', ['handler' => MyRecipeHandler']);
 Please take a look at [RecipeHandler.php](https://github.com/Reasno/ComposeMixins/blob/master/src/RecipeHandler.php) in this library to learn how to write your own handlers.
 
 ## Caveat
-Functions composed with "map" and "collapse" recipes also accept Traversable as input.
+* Functions composed with "map" and "collapse" recipes also accept Traversable as input.
+* For "all" and "any" recipes, all functions are always evaluated regardless of their return value.
 
