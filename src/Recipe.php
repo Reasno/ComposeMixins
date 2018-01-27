@@ -1,6 +1,7 @@
 <?php
 namespace Reasno\Helpers;
 class Recipe{
+	
 	public function __construct( $handlerName = null, $options = null){
 		if ($options !== null){
 			$this->handlerClass = $options['handler'];

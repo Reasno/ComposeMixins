@@ -7,7 +7,7 @@ ComposeMixins is a tiny but extendable library for function composition.
 composer install reasno/compose-mixins
 ```
 
-## Hello World
+## Examples
 ```php
 use function Reasno\Helpers\composeMixins;
 use Reasno\Helpers\Recipe;
@@ -58,8 +58,8 @@ Recipe::fromCallable(function(...$fns){
 });
 ```
 
-You can define your own RecipeHandlers in you own code, and pass it to the recipe constructor.
-```
+You can define your own RecipeHandlers in your own code, and pass it to the recipe constructor.
+```php
 Class MyRecipeHandler{
 	//...
 }
