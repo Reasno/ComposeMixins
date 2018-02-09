@@ -42,7 +42,7 @@ $r = Recipe::fromCallable(function(...$fns){
 	};
 });
 $f5 = composeMixins($r, $a, $b, $c);
-assert($f5(5) == 6, 'Recipe from callable');
-assert($f5(5) == 25, 'Recipe from callable');
-assert($f5(5) == 0, 'Recipe from callable');
-assert($f5(5) ==  null, 'Recipe from callable');
+assert($f5(5) === 6, 'Recipe from callable');
+assert($f5(5) === 25, 'Recipe from callable');
+assert($f5(5) === 0, 'Recipe from callable');
+assert($f5(5) === null, 'Recipe from callable');
