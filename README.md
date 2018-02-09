@@ -73,3 +73,5 @@ Please take a look at [RecipeHandler.php](https://github.com/Reasno/ComposeMixin
 * Functions composed with ```map``` and ```collapse``` recipes also accept ```Traversable``` as input.
 * For ```all``` and ```any``` recipes, all functions are always evaluated regardless of their return values.
 
+## Testing
+PHPUnit is overkill for this project. To do a simple test, execute ```php tests/composeMixinsTest.php``` and see if all assertions pass.
