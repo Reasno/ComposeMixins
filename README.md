@@ -70,6 +70,6 @@ $CustomRecipe = new Recipe('fancy', ['handler' => 'MyRecipeHandler']);
 Please take a look at [RecipeHandler.php](https://github.com/Reasno/ComposeMixins/blob/master/src/RecipeHandler.php) in this library to learn how to write your own handlers.
 
 ## Caveat
-* Functions composed with "map" and "collapse" recipes also accept Traversable as input.
-* For "all" and "any" recipes, all functions are always evaluated regardless of their return value.
+* Functions composed with ```map``` and ```collapse``` recipes also accept ```Traversable``` as input.
+* For ```all``` and ```any``` recipes, all functions are always evaluated regardless of their return values.
 
