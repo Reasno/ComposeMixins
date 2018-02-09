@@ -65,7 +65,7 @@ You can define your own RecipeHandlers in your own code, and pass it to the reci
 Class MyRecipeHandler{
 	//...
 }
-$CustomRecipe = new Recipe('fancy', ['handler' => MyRecipeHandler']);
+$CustomRecipe = new Recipe('fancy', ['handler' => 'MyRecipeHandler']);
 ```
 Please take a look at [RecipeHandler.php](https://github.com/Reasno/ComposeMixins/blob/master/src/RecipeHandler.php) in this library to learn how to write your own handlers.
 
