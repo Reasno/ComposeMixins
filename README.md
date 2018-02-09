@@ -39,9 +39,9 @@ This library comes with a few (most frequently used) built in recipes. These rec
 * all: returns true if all functions (eg. f(x), g(x)...) return true.
 * any: returns true if any function returns true.
 
-To use any recipe, create new instance with their names.
+To use any recipe, create new instance with their names passed into constructor.
 ```php
-new Recipe('pipe');
+new Recipe('map');
 ```
 
 You can create new recipes on the fly. Just pass in a closure.
