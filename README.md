@@ -4,7 +4,7 @@ ComposeMixins is a tiny but extendable PHP library for function composition.
 ## Installation
 ```bash
 # in your project root
-composer install reasno/compose-mixins
+composer require reasno/compose-mixins
 ```
 
 ## Examples
